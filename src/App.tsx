@@ -4,15 +4,17 @@ import HomePage from 'pages/HomePage';
 import SeriesPage from 'pages/SeriesPage';
 import SearchPage from 'pages/SearchPage';
 import './App.css';
+import Layout from 'components/Layout';
 
 function App() {
     return (
         <div className="App">
-            <h1>Welcome to React Router!</h1>
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="series" element={<SeriesPage />} />
-                <Route path="search" element={<SearchPage />} />
+                <Route element={<Layout />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="series" element={<SeriesPage />} />
+                    <Route path="search" element={<SearchPage />} />
+                </Route>
             </Routes>
         </div>
     );
