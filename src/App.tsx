@@ -4,13 +4,13 @@ import HomePage from 'pages/HomePage';
 import SeriesPage from 'pages/SeriesPage';
 import SearchPage from 'pages/SearchPage';
 import './App.css';
-import Layout from 'components/Layout';
+import MainLayout from 'layout/MainLayout';
 
 function App() {
     return (
         <div className="App">
             <Routes>
-                <Route element={<Layout />}>
+                <Route element={<MainLayout />}>
                     <Route index element={<HomePage />} />
                     <Route path="series" element={<SeriesPage />} />
                     <Route path="search" element={<SearchPage />} />
